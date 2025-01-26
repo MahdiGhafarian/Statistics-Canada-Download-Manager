@@ -12,6 +12,3 @@ The program remembers the last set of files downloaded and user can just click o
 <h2>Output: Tables Folder</h2>
 When all files are downloaded and unzipped the Tables folder which includes the tables will be opened.
 ![image](https://github.com/user-attachments/assets/36be988e-df91-4e38-a289-969d83e38b10)
-
-
-
