@@ -8,7 +8,10 @@ The program remembers the last set of files downloaded and user can just click o
 2. Download the zip folder and extract it to your computer.
 3. Double click on the file named 'SC Download Manager.py'
 <h2>Environment</h2>
-
 ![image](https://github.com/user-attachments/assets/320d48d7-3ee2-43ef-80ff-617100f489fb)
+<h2>Output: Tables Folder</h2>
+When all files are downloaded and unzipped the Tables folder which includes the tables will be opened.
+![image](https://github.com/user-attachments/assets/36be988e-df91-4e38-a289-969d83e38b10)
+
 
 
