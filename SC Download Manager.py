@@ -16,7 +16,7 @@ def install_missing_modules(modules):
             subprocess.check_call([sys.executable, "-m", "pip", "install", module])
 
 # List of required modules
-required_modules = ['tkinter', 'requests', 'threading', 'queue', 'os', 'zipfile', 'time']
+required_modules = ['tkinter', 'requests']
 
 # Install missing modules
 install_missing_modules(required_modules)
