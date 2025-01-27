@@ -4,6 +4,23 @@ Author: Mahdi Ghafaian
 Date: 2025-01-26
 
 '''
+import subprocess
+import sys
+
+# Function to install missing modules
+def install_missing_modules(modules):
+    for module in modules:
+        try:
+            __import__(module)
+        except ImportError:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", module])
+
+# List of required modules
+required_modules = ['tkinter', 'requests', 'threading', 'queue', 'os', 'zipfile', 'time']
+
+# Install missing modules
+install_missing_modules(required_modules)
+
 import tkinter as tk
 from tkinter import ttk
 import requests
