@@ -14,6 +14,10 @@ The program remembers the last set of files downloaded and user can just click o
 
 ![image](https://github.com/user-attachments/assets/320d48d7-3ee2-43ef-80ff-617100f489fb)
 
+<h2>Demo</h2>
+
+https://github.com/user-attachments/assets/02e39131-4ab3-4863-97e3-3a5c8a5fb7be
+
 <h2>Output: Tables</h2>
 When all files are downloaded and unzipped the Tables folder which includes the tables will be opened.
 <p/>
