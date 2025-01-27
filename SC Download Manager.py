@@ -4,6 +4,11 @@ Author: Mahdi Ghafaian
 Date: 2025-01-26
 
 '''
+
+# -------------------------------------------------------------------------
+# Initialization
+# -------------------------------------------------------------------------
+
 import subprocess
 import sys
 
@@ -21,6 +26,7 @@ required_modules = ['tkinter', 'requests']
 # Install missing modules
 install_missing_modules(required_modules)
 
+# Import modules
 import tkinter as tk
 from tkinter import ttk
 import requests
@@ -37,9 +43,14 @@ tables_dir = os.path.join(script_dir, 'Tables')
 # Ensure the Tables directory exists
 os.makedirs(tables_dir, exist_ok=True)
 
+# Global variables
 download_queue = queue.Queue()
-download_status = {}
+download_status = {} # Dictionary {table_id: True or False}
 table_ids_file = os.path.join(script_dir, 'Resources', 'history.txt')
+
+# -------------------------------------------------------------------------
+# Functions
+# -------------------------------------------------------------------------
 
 def download_file(url, table_id):
     dest = os.path.join(tables_dir, f"{table_id}-eng.zip")
@@ -113,7 +124,7 @@ def add_table_id():
         listbox.insert(tk.END, table_id)
         table_id_entry.delete(0, tk.END)
         save_table_ids()
-        task_label.config(text="Table added to the download list.")
+        task_label.config(text=f"Table {table_id} added to the download list.")
 
     else:
         task_label.config(text="Invalid table ID. Please enter a numeric value.")
@@ -125,7 +136,7 @@ def remove_selected_table_id():
         if table_id in download_status:
             del download_status[table_id]
         listbox.delete(index)
-        task_label.config(text="Table removed from the download list.")
+        task_label.config(text=f"Table {table_id} removed from the download list.")
     save_table_ids()
 
 def update_listbox():
@@ -149,6 +160,9 @@ def load_table_ids():
                 if table_id:
                     listbox.insert(tk.END, table_id)
 
+# -------------------------------------------------------------------------
+# UI
+# -------------------------------------------------------------------------
 root = tk.Tk()
 root.title("Statistics Canada Download Manager")
 root.resizable(False, False)  # Freeze the window size
