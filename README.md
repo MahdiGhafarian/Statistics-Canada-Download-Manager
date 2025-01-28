@@ -8,7 +8,7 @@ SCDM is a Python utility featuring a graphical user interface (GUI) that allows 
 - Optionally unzip downloaded files.
 - Remembers the last set of files downloaded for easy re-download.
 
-### Prerequisites
+## Prerequisites
 
 - Python 3.x (Download from python.org)
 
