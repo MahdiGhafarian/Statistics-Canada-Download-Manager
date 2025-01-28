@@ -8,14 +8,7 @@ Date: 2025-01-26
 # -------------------------------------------------------------------------
 # Initialization
 # -------------------------------------------------------------------------
-
-# List of required modules
-required_modules = ['tkinter', 'requests']
-
-# Install missing modules
-install_missing_modules(required_modules)
-
-# Import modules
+# Import standard modules
 import tkinter as tk
 from tkinter import ttk
 import requests
@@ -24,6 +17,15 @@ import queue
 import os
 import zipfile
 import time
+
+# Import custom modules
+from helpers.helper import install_missing_modules
+
+# List of required modules
+required_modules = ['tkinter', 'requests']
+
+# Install missing modules
+install_missing_modules(required_modules)
 
 # Get the directory of the current script
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -35,7 +37,7 @@ os.makedirs(tables_dir, exist_ok=True)
 # Global variables
 download_queue = queue.Queue()
 download_status = {} # Dictionary {table_id: True or False}
-table_ids_file = os.path.join(script_dir, 'resources', 'history.txt')
+table_ids_file = os.path.join(script_dir, 'assets', 'history.txt')
 
 # -------------------------------------------------------------------------
 # Functions
@@ -157,7 +159,7 @@ root.title("Statistics Canada Download Manager")
 root.resizable(False, False)  # Freeze the window size
 
 # Set the window icon
-icon_path = os.path.join(script_dir, 'resources', 'ca.ico')
+icon_path = os.path.join(script_dir, 'assets', 'ca.ico')
 
 try:
     root.iconbitmap(icon_path)
