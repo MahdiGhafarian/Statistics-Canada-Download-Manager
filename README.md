@@ -18,11 +18,12 @@ SCDM is a Python utility featuring a graphical user interface (GUI) that allows 
 2. Download the zip folder and extract it to your computer.
 3. Navigate to the project directory and run the main.py program.
 
-# Demo: Downloading Multiple Tables
+# Demo
+## Downloading Multiple Tables
 
 https://github.com/user-attachments/assets/02e39131-4ab3-4863-97e3-3a5c8a5fb7be
 
-# Output: Unzipped Tables
+## Unzipped Tables
 Once all files are downloaded and unzipped, the `Tables` folder containing the tables will automatically open.
 
 ![image](https://github.com/user-attachments/assets/456a1f67-a388-410d-ac83-a91a69d62931)
