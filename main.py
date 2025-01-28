@@ -38,7 +38,7 @@ import time
 
 # Get the directory of the current script
 script_dir = os.path.dirname(os.path.abspath(__file__))
-tables_dir = os.path.join(script_dir, 'Tables')
+tables_dir = os.path.join(script_dir, 'tables')
 
 # Ensure the Tables directory exists
 os.makedirs(tables_dir, exist_ok=True)
@@ -46,7 +46,7 @@ os.makedirs(tables_dir, exist_ok=True)
 # Global variables
 download_queue = queue.Queue()
 download_status = {} # Dictionary {table_id: True or False}
-table_ids_file = os.path.join(script_dir, 'Resources', 'history.txt')
+table_ids_file = os.path.join(script_dir, 'resources', 'history.txt')
 
 # -------------------------------------------------------------------------
 # Functions
@@ -168,7 +168,7 @@ root.title("Statistics Canada Download Manager")
 root.resizable(False, False)  # Freeze the window size
 
 # Set the window icon
-icon_path = os.path.join(script_dir, 'Resources', 'ca.ico')
+icon_path = os.path.join(script_dir, 'resources', 'ca.ico')
 
 try:
     root.iconbitmap(icon_path)
