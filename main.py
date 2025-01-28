@@ -9,23 +9,32 @@ Date: 2025-01-26
 # Initialization
 # -------------------------------------------------------------------------
 # Import standard modules
-import tkinter as tk
-from tkinter import ttk
-import requests
 import threading
 import queue
 import os
 import zipfile
 import time
+import subprocess
+import sys
 
-# Import custom modules
-from utils.setup import install_missing_modules
+# Function to install missing modules
+def install_missing_modules(modules):
+    for module in modules:
+        try:
+            __import__(module)
+        except ImportError:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", module])
 
-# List of required modules
+# List of third-party modules
 required_modules = ['tkinter', 'requests']
 
-# Install missing modules
+# Install third-party modules
 install_missing_modules(required_modules)
+
+# Import third-party modules
+import tkinter as tk
+from tkinter import ttk
+import requests
 
 # Get the directory of the current script
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -154,6 +163,7 @@ def load_table_ids():
 # -------------------------------------------------------------------------
 # UI
 # -------------------------------------------------------------------------
+# Create the main window
 root = tk.Tk()
 root.title("Statistics Canada Download Manager")
 root.resizable(False, False)  # Freeze the window size
@@ -225,4 +235,5 @@ task_label.grid(row=1, column=0, sticky=(tk.W, tk.E), pady=5)
 # Load table IDs from file
 load_table_ids()
 
+# Start the GUI event loop
 root.mainloop()
