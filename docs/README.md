@@ -7,7 +7,7 @@ The program remembers the last set of files downloaded and user can just click o
 <ol>
 <li>Install Python from python.org</li>
 <li>Download the zip folder and extract it to your computer.</li>
-<li>Double click on the file named <b>'SC Download Manager.py'</b></li>
+<li>Double click on the file named <b>'main.py'</b></li>
 </ol>
 <h2>Demo: Downloading Multiple Tables</h2>
 
