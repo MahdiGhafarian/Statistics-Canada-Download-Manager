@@ -19,7 +19,7 @@ import zipfile
 import time
 
 # Import custom modules
-from helpers.helper import install_missing_modules
+from utils.setup import install_missing_modules
 
 # List of required modules
 required_modules = ['tkinter', 'requests']
@@ -31,7 +31,7 @@ install_missing_modules(required_modules)
 script_dir = os.path.dirname(os.path.abspath(__file__))
 tables_dir = os.path.join(script_dir, 'tables')
 
-# Ensure the Tables directory exists
+# Ensure the tables directory exists
 os.makedirs(tables_dir, exist_ok=True)
 
 # Global variables
@@ -222,13 +222,7 @@ close_button.grid(row=10, column=0, pady=10, sticky=(tk.W, tk.E))
 task_label = ttk.Label(root, text="Ready", relief=tk.FLAT, anchor=tk.W, width=30)
 task_label.grid(row=1, column=0, sticky=(tk.W, tk.E), pady=5)
 
-# Set a fixed width for the window
-root.update_idletasks()  # Update "requested size" from geometry manager
-width = root.winfo_width()
-height = root.winfo_height()
-root.minsize(width, height)
-root.maxsize(width, height)
-
+# Load table IDs from file
 load_table_ids()
 
 root.mainloop()
