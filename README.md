@@ -1,4 +1,4 @@
-# Statistics Canada Download Manager (SCDM)
+# Statistics Canada Download Manager
 
 SCDM is a Python utility featuring a graphical user interface (GUI) that allows users to download single or multiple tables (in zip format) from Statistics Canada and optionally unzip them. The program also remembers the last set of files downloaded, enabling users to quickly re-download them with a single click.
 
